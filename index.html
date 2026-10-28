@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Notas - UX/UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="tarjeta">
+    <h1>Mis Notas</h1>
+    <p class="ayuda">Registra y administra tus pendientes de forma rápida y sencilla.</p>
+
+    <form id="formulario-nota" novalidate>
+        <fieldset>
+        <legend>Nueva Nota</legend>
+        
+        <label for="titulo">Título de la nota</label>
+        <input id="titulo" type="text" placeholder="Ej. Compras del súper" required>
+
+        <label for="contenido">Contenido</label>
+        <textarea id="contenido" rows="4" placeholder="Escribe los detalles aquí..." required></textarea>
+        </fieldset>
+
+        <p id="mensaje" class="mensaje" role="status"></p>
+
+        <div class="acciones">
+        <button type="submit" class="boton-principal">Guardar nota</button>
+        <button type="reset" class="boton-secundario">Limpiar</button>
+        </div>
+    </form>
+
+    <section aria-label="Lista de notas guardadas" class="contenedor-lista">
+        <h2>Notas guardadas</h2>
+        <ul id="lista-notas">
+        <!-- Las notas se cargarán aquí -->
+        </ul>
+    </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
